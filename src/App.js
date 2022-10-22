@@ -7,9 +7,16 @@ const emojidictionary = {
   "🍍": "Pineapple",
   "🍔": "Hamburger",
   "🍕": "Pizza",
-  "🍟": "French Fries"
+  "🍟": "French Fries",
+  "🎂":"Cake",
+  "🍥":"Fish Cake",
+  "🧇":"Waffle",
+  "🫔":"Tamale",
+  "🍝":"Spaghetti",
+  "🍩":"Donut"
 };
 var emojiWeKnow = Object.keys(emojidictionary);
+var input_text=document.querySelector("#input_box");
 
 export default function App() {
   const [meaning, setMeaning] = useState("");
@@ -17,7 +24,10 @@ export default function App() {
   function emojiChangeHandler(event) {
     var emoji = event.target.value;
     var meaning = emojidictionary[emoji];
-
+    
+    if(input_text.value===""){
+      meaning="Input field empty";
+    }
     if (meaning === undefined) {
       meaning = "Sorry! not in db";
     }
@@ -32,7 +42,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>inside outt</h1>
-      <input onChange={emojiChangeHandler} />
+      <input id="input_box" onChange={emojiChangeHandler} />
       <h2> {meaning}</h2>
       <h3>Emojis we know</h3>
       {emojiWeKnow.map(function (emojis) {
