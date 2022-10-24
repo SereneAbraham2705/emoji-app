@@ -6,3 +6,4 @@ In addition to this the emojis are diaplayed on the app so when a user clicks on
 TECHNOLOGIES USED: React
 
 CHECK OUT THE APP HERE:
+https://serene-emoji-app.netlify.app/
