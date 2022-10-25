@@ -25,10 +25,10 @@ export default function App() {
     var emoji = event.target.value;
     var meaning = emojidictionary[emoji];
     
-    if(input_text.value===""){
+    if(input_text && input_text.value===""){
       meaning="Input field empty";
     }
-    if (meaning === undefined) {
+    if (input_text && meaning === undefined) {
       meaning = "Sorry! not in db";
     }
     setMeaning(meaning);
