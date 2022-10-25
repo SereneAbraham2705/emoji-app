@@ -28,7 +28,7 @@ export default function App() {
     if(input_text && input_text.value===""){
       meaning="Input field empty";
     }
-    if (input_text && meaning === undefined) {
+    if (meaning === undefined) {
       meaning = "Sorry! not in db";
     }
     setMeaning(meaning);
